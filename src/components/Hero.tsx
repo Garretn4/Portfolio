@@ -1,0 +1,38 @@
+import { stack } from '../data/projects.ts'
+import photo from '../../assets/images/garret.jpg'
+
+export default function Hero() {
+  return (
+    <section className="hero" id="top">
+      <div className="hero__glow" aria-hidden="true" />
+      <div className="hero__inner">
+        <div className="hero__text">
+          <p className="hero__eyebrow">Full-Stack Developer</p>
+          <h1 className="hero__name">Garret Nelson</h1>
+          <p className="hero__lead">
+            I build <span className="grad">automation</span>, <span className="grad">trading systems</span>,
+            and <span className="grad">internal tools</span> — mostly in TypeScript and Python, shipped
+            end to end.
+          </p>
+          <div className="hero__actions">
+            <a className="btn btn--primary" href="#work">
+              View my work
+            </a>
+            <a className="btn btn--ghost" href="mailto:garrettoddnelson@gmail.com">
+              Get in touch
+            </a>
+          </div>
+          <ul className="hero__stack">
+            {stack.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="hero__photo-wrap">
+          <div className="hero__photo-ring" aria-hidden="true" />
+          <img className="hero__photo" src={photo} alt="Garret Nelson" />
+        </div>
+      </div>
+    </section>
+  )
+}
