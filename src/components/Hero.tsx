@@ -1,4 +1,5 @@
 import { stack } from '../data/projects.ts'
+import CopyEmail from './CopyEmail.tsx'
 import photo from '../../assets/images/garret.jpg'
 
 export default function Hero() {
@@ -18,9 +19,7 @@ export default function Hero() {
             <a className="btn btn--primary" href="#work">
               View my work
             </a>
-            <a className="btn btn--ghost" href="mailto:garrettoddnelson@gmail.com">
-              Get in touch
-            </a>
+            <CopyEmail className="btn btn--ghost" label="Get in touch" />
           </div>
           <ul className="hero__stack">
             {stack.map((s) => (

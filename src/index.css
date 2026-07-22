@@ -194,6 +194,11 @@ section {
   margin-bottom: 2.25rem;
 }
 .btn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -455,6 +460,10 @@ section {
   margin: 0 0 1.5rem;
 }
 .footer__mail {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
   display: inline-block;
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: 600;
