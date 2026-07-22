@@ -17,7 +17,10 @@ export default function ProjectCard({ project }: { project: Project }) {
     <article className="card">
       <div className="card__head">
         <h3 className="card__title">{project.title}</h3>
-        {project.live && <span className="card__badge">Live</span>}
+        <span className="card__badges">
+          {project.live && <span className="card__badge">Live</span>}
+          {project.isPrivate && <span className="card__badge card__badge--private">Private</span>}
+        </span>
       </div>
       <p className="card__blurb">{project.blurb}</p>
       <ul className="card__tags">
@@ -26,9 +29,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </ul>
       <div className="card__links">
-        <a href={project.repo} target="_blank" rel="noreferrer">
-          Code <ArrowIcon />
-        </a>
+        {project.repo && (
+          <a href={project.repo} target="_blank" rel="noreferrer">
+            Code <ArrowIcon />
+          </a>
+        )}
         {project.live && (
           <a href={project.live} target="_blank" rel="noreferrer">
             Live demo <ArrowIcon />
