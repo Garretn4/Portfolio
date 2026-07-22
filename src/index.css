@@ -341,6 +341,10 @@ section {
   margin: 0;
   font-weight: 700;
 }
+.card__badges {
+  display: flex;
+  gap: 0.35rem;
+}
 .card__badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -350,6 +354,11 @@ section {
   border-radius: 999px;
   color: #04121a;
   background: linear-gradient(120deg, #21d4fd, #6ef2c0);
+}
+.card__badge--private {
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .card__blurb {
   color: var(--text-dim);

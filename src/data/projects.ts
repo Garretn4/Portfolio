@@ -3,8 +3,9 @@ export type Project = {
   title: string
   blurb: string
   tags: string[]
-  repo: string
+  repo?: string
   live?: string
+  isPrivate?: boolean
 }
 
 export type ProjectGroup = {
@@ -28,15 +29,23 @@ export const groups: ProjectGroup[] = [
         blurb:
           'Automated lead-distribution service that routes inbound leads to the right rep in real time.',
         tags: ['TypeScript', 'Vercel', 'Node'],
-        repo: `${GH}/lead-pool`,
+        isPrivate: true,
         live: 'https://lead-pool-ruddy.vercel.app',
+      },
+      {
+        name: 'fex-quoter',
+        title: 'FEX Quoter',
+        blurb:
+          'Login-gated final-expense carrier recommender with per-user accounts, quote history, audit logging, and an admin dashboard.',
+        tags: ['Node', 'Express', 'SQLite', 'Render'],
+        isPrivate: true,
       },
       {
         name: 'dialer',
         title: 'Dialer',
         blurb: 'Browser-based power dialer for running outbound calling workflows from one screen.',
         tags: ['TypeScript', 'Vercel', 'Telephony'],
-        repo: `${GH}/dialer`,
+        isPrivate: true,
         live: 'https://dialer-xi-two.vercel.app',
       },
       {
@@ -44,14 +53,14 @@ export const groups: ProjectGroup[] = [
         title: 'FB → Calendly Pipeline',
         blurb: 'Turns inbound Facebook leads into booked Calendly appointments automatically.',
         tags: ['Python', 'Webhooks', 'Automation'],
-        repo: `${GH}/fb-calendly-skeleton`,
+        isPrivate: true,
       },
       {
         name: 'CommSync',
         title: 'CommSync',
         blurb: 'Backend service for keeping communications in sync across channels.',
         tags: ['Python', 'API', 'Server'],
-        repo: `${GH}/CommSync`,
+        isPrivate: true,
       },
     ],
   },
@@ -73,7 +82,7 @@ export const groups: ProjectGroup[] = [
         title: 'Quant',
         blurb: 'A sandbox for quantitative trading strategies and backtesting ideas.',
         tags: ['Python', 'Research'],
-        repo: `${GH}/Quant`,
+        isPrivate: true,
       },
     ],
   },
@@ -87,7 +96,7 @@ export const groups: ProjectGroup[] = [
         title: 'Pi Stack',
         blurb: 'A self-hosted service stack running on Raspberry Pi hardware.',
         tags: ['Python', 'Raspberry Pi', 'Self-hosted'],
-        repo: `${GH}/pi-stack`,
+        isPrivate: true,
       },
       {
         name: 'home-automation-lab',
@@ -101,7 +110,7 @@ export const groups: ProjectGroup[] = [
         title: 'Personal OS',
         blurb: 'A personal dashboard and workflow layer for running day-to-day operations.',
         tags: ['JavaScript', 'Dashboard'],
-        repo: `${GH}/Personal-OS`,
+        isPrivate: true,
       },
     ],
   },
