@@ -1,7 +1,6 @@
-const socials = [
-  { label: 'Email', href: 'mailto:garrettoddnelson@gmail.com' },
-  { label: 'GitHub', href: 'https://github.com/Garretn4' },
-]
+import CopyEmail, { EMAIL } from './CopyEmail.tsx'
+
+const socials = [{ label: 'GitHub', href: 'https://github.com/Garretn4' }]
 
 export default function Footer() {
   return (
@@ -12,9 +11,7 @@ export default function Footer() {
         <h2 className="footer__title">
           Let&apos;s build something.
         </h2>
-        <a className="footer__mail" href="mailto:garrettoddnelson@gmail.com">
-          garrettoddnelson@gmail.com
-        </a>
+        <CopyEmail className="footer__mail" label={EMAIL} />
         <div className="footer__links">
           {socials.map((s) => (
             <a key={s.label} href={s.href} target="_blank" rel="noreferrer">
