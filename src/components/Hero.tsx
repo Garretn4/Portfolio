@@ -8,12 +8,11 @@ export default function Hero() {
       <div className="hero__glow" aria-hidden="true" />
       <div className="hero__inner">
         <div className="hero__text">
-          <p className="hero__eyebrow">Full-Stack Developer</p>
+          <p className="hero__eyebrow">Systems Architect</p>
           <h1 className="hero__name">Garret Nelson</h1>
           <p className="hero__lead">
             I build <span className="grad">automation</span>, <span className="grad">trading systems</span>,
-            and <span className="grad">internal tools</span> — mostly in TypeScript and Python, shipped
-            end to end.
+            and <span className="grad">internal tools</span> in TypeScript and Python.
           </p>
           <div className="hero__actions">
             <a className="btn btn--primary" href="#work">

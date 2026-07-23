@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="footer__inner">
         <p className="footer__eyebrow">Contact</p>
         <h2 className="footer__title">
-          Let&apos;s build something.
+          Email is the fastest way to reach me.
         </h2>
         <CopyEmail className="footer__mail" label={EMAIL} />
         <div className="footer__links">
