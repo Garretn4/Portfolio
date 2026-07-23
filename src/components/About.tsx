@@ -10,11 +10,11 @@ export default function About() {
             I like taking a rough process and turning it into something that runs itself.
           </h2>
           <p className="about__body">
-            Most of my projects start as a real problem — leads falling through the cracks, a
+            Most of my projects start as a real problem: leads falling through the cracks, a
             calling workflow that takes too many clicks, a trading idea worth testing. I build the
-            service end to end, ship it, and iterate. Lately that means TypeScript on the front and
-            edge, Python for the automation and data work, and a rack of Raspberry Pis for anything
-            that should just keep running at home.
+            whole thing and keep fixing it until it holds up. TypeScript for the front end, Python
+            for automation and data work, and a rack of Raspberry Pis at home for anything that
+            needs to stay running.
           </p>
         </div>
       </Reveal>

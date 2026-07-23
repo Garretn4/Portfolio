@@ -21,13 +21,12 @@ export const groups: ProjectGroup[] = [
   {
     id: 'automation',
     label: 'Automation & Lead Systems',
-    summary: 'Services that move leads and communications through a pipeline without a human in the loop.',
+    summary: 'Services that take a lead from ad click to booked call with no one touching it.',
     projects: [
       {
         name: 'lead-pool',
         title: 'Lead Pool',
-        blurb:
-          'Automated lead-distribution service that routes inbound leads to the right rep in real time.',
+        blurb: 'Routes inbound leads to the right rep the moment they arrive.',
         tags: ['TypeScript', 'Vercel', 'Node'],
         isPrivate: true,
         live: 'https://lead-pool-ruddy.vercel.app',
@@ -36,14 +35,14 @@ export const groups: ProjectGroup[] = [
         name: 'fex-quoter',
         title: 'FEX Quoter',
         blurb:
-          'Login-gated final-expense carrier recommender with per-user accounts, quote history, audit logging, and an admin dashboard.',
+          'Agents log in, run a quote, and get the best-fit final-expense carrier. Saves every quote and audits every action.',
         tags: ['Node', 'Express', 'SQLite', 'Render'],
         isPrivate: true,
       },
       {
         name: 'dialer',
         title: 'Dialer',
-        blurb: 'Browser-based power dialer for running outbound calling workflows from one screen.',
+        blurb: 'Power dialer that runs a full outbound calling session in the browser.',
         tags: ['TypeScript', 'Vercel', 'Telephony'],
         isPrivate: true,
         live: 'https://dialer-xi-two.vercel.app',
@@ -51,14 +50,14 @@ export const groups: ProjectGroup[] = [
       {
         name: 'fb-calendly-skeleton',
         title: 'FB → Calendly Pipeline',
-        blurb: 'Turns inbound Facebook leads into booked Calendly appointments automatically.',
+        blurb: 'Books Facebook leads straight into Calendly appointments.',
         tags: ['Python', 'Webhooks', 'Automation'],
         isPrivate: true,
       },
       {
         name: 'CommSync',
         title: 'CommSync',
-        blurb: 'Backend service for keeping communications in sync across channels.',
+        blurb: 'Backend service that keeps conversations in sync across channels.',
         tags: ['Python', 'API', 'Server'],
         isPrivate: true,
       },
@@ -67,20 +66,19 @@ export const groups: ProjectGroup[] = [
   {
     id: 'trading',
     label: 'Trading & Quant',
-    summary: 'Experiments in market data, strategy, and automated execution.',
+    summary: 'Bots and backtests against live market data.',
     projects: [
       {
         name: 'binance-triangular-arbitrage',
         title: 'Triangular Arbitrage Bot',
-        blurb:
-          'Scans Binance order books for triangular arbitrage opportunities across trading pairs.',
+        blurb: 'Scans Binance order books for triangular arbitrage across trading pairs.',
         tags: ['Python', 'Binance API', 'Trading'],
         repo: `${GH}/binance-triangular-arbitrage`,
       },
       {
         name: 'Quant',
         title: 'Quant',
-        blurb: 'A sandbox for quantitative trading strategies and backtesting ideas.',
+        blurb: 'Where I backtest trading strategy ideas before risking money on them.',
         tags: ['Python', 'Research'],
         isPrivate: true,
       },
@@ -89,26 +87,26 @@ export const groups: ProjectGroup[] = [
   {
     id: 'infra',
     label: 'Infrastructure & Hardware',
-    summary: 'Self-hosted stacks and the physical environment they run on.',
+    summary: 'Services I run on my own hardware.',
     projects: [
       {
         name: 'pi-stack',
         title: 'Pi Stack',
-        blurb: 'A self-hosted service stack running on Raspberry Pi hardware.',
+        blurb: 'The service stack that runs on my Raspberry Pis.',
         tags: ['Python', 'Raspberry Pi', 'Self-hosted'],
         isPrivate: true,
       },
       {
         name: 'home-automation-lab',
         title: 'Home Automation Lab',
-        blurb: 'Configuration and notes for my current home automation setup.',
+        blurb: 'Config and notes for my home automation setup.',
         tags: ['IoT', 'Automation', 'Config'],
         repo: `${GH}/home-automation-lab`,
       },
       {
         name: 'Personal-OS',
         title: 'Personal OS',
-        blurb: 'A personal dashboard and workflow layer for running day-to-day operations.',
+        blurb: 'A dashboard for running my day to day.',
         tags: ['JavaScript', 'Dashboard'],
         isPrivate: true,
       },
@@ -117,7 +115,7 @@ export const groups: ProjectGroup[] = [
   {
     id: 'notion',
     label: 'Notion Widgets',
-    summary: 'Embeddable widgets that extend Notion dashboards.',
+    summary: 'Widgets I embed in Notion dashboards.',
     projects: [
       {
         name: 'notionCalendar',
@@ -137,7 +135,7 @@ export const groups: ProjectGroup[] = [
       {
         name: 'notionSidebar',
         title: 'Notion Sidebar',
-        blurb: 'A custom sidebar widget to navigate a Notion workspace.',
+        blurb: 'A sidebar widget for navigating a Notion workspace.',
         tags: ['HTML', 'Widget'],
         repo: `${GH}/notionSidebar`,
       },
