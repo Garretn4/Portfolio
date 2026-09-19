@@ -10,10 +10,10 @@ export default function Hero() {
         <div className="hero__text">
           <p className="hero__eyebrow">Systems Architect</p>
           <h1 className="hero__name">Garret Nelson</h1>
-          <p className="hero__lead">
-            I build <span className="grad">automation</span>, <span className="grad">trading systems</span>,
-            and <span className="grad">internal tools</span> in TypeScript and Python.
-          </p>
+         <p className="hero__lead">
+  I build the software that moves <span className="grad">leads</span>,{' '}
+  <span className="grad">data</span>, and <span className="grad">decisions</span> through a business.
+</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href="#work">
               View my work
