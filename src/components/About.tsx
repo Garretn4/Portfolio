@@ -7,7 +7,8 @@ export default function About() {
         <div className="about__inner">
           <p className="section-head__eyebrow">About</p>
           <h2 className="about__title">
-            I like taking a rough process and turning it into something that runs itself.
+           Sales, federal captyue and pricing, and software. I work where revenue meets operations.
+          
           </h2>
           <p className="about__body">
             Most of my projects start as a real problem: leads falling through the cracks, a
