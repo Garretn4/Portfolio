@@ -7,7 +7,7 @@ export default function About() {
         <div className="about__inner">
           <p className="section-head__eyebrow">About</p>
           <h2 className="about__title">
-           Sales, federal captyue and pricing, and software. I work where revenue meets operations.
+           Sales, federal capture and pricing, and software. I work where revenue meets operations.
           
           </h2>
           <p className="about__body">
