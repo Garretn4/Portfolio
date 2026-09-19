@@ -12,8 +12,8 @@ export default function About() {
           <p className="about__body">
             Most of my projects start as a real problem: leads falling through the cracks, a
             calling workflow that takes too many clicks, a trading idea worth testing. I build the
-            whole thing and keep fixing it until it holds up. TypeScript for the front end, Python
-            for automation and data work, and a rack of Raspberry Pis at home for anything that
+            whole thing and torubleshoot until it holds up. TypeScript for the front end, Python
+            for automation and data work, and a  Raspberry Pi  for anything that
             needs to stay running.
           </p>
         </div>
