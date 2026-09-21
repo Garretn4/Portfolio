@@ -11,8 +11,9 @@ export default function Hero() {
           <p className="hero__eyebrow">Systems Architect</p>
           <h1 className="hero__name">Garret Nelson</h1>
           <p className="hero__lead">
-            I take a rough process and turn it into something that{' '}
-            <span className="grad">runs itself</span>.
+            I build the software that moves <span className="grad">leads</span>,{' '}
+            <span className="grad">data</span>, and <span className="grad">decisions</span> through a
+            business.
           </p>
           <p className="hero__sub">
             Lead routing, quoting, and dialing tools for insurance agencies. Compliance tooling for
