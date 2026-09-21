@@ -156,8 +156,8 @@ section {
   inset: -30% 20% auto -10%;
   height: 620px;
   background:
-    radial-gradient(closest-side, rgba(124, 92, 255, 0.28), transparent 70%),
-    radial-gradient(closest-side, rgba(33, 212, 253, 0.2), transparent 70%);
+    radial-gradient(closest-side, rgba(124, 92, 255, 0.16), transparent 70%),
+    radial-gradient(closest-side, rgba(33, 212, 253, 0.1), transparent 70%);
   background-position:
     20% 30%,
     80% 10%;
@@ -229,6 +229,32 @@ section {
   border-color: var(--accent-2);
   transform: translateY(-2px);
 }
+.hero__sub {
+  color: var(--text-dim);
+  font-size: 1.02rem;
+  max-width: 34rem;
+  margin: 0 0 1rem;
+}
+.hero__now {
+  display: inline-flex;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.5;
+  gap: 0.55rem;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin: 0 0 1.6rem;
+}
+.hero__now-dot {
+  margin-top: 0.3rem;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #6ef2c0;
+  box-shadow: 0 0 0 4px rgba(110, 242, 192, 0.15);
+}
 .hero__stack {
   display: flex;
   flex-wrap: wrap;
@@ -299,6 +325,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
+  align-items: start;
 }
 
 /* ---------- card ---------- */
@@ -365,6 +392,43 @@ section {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.card__meta {
+  display: flex;
+  gap: 0.5rem;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  margin: 0 0 0.75rem;
+}
+.card__shot {
+  position: relative;
+  margin: -1.5rem -1.5rem 1.1rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+.card__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.4s;
+}
+.card__shot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, var(--bg-soft) 100%);
+  pointer-events: none;
+}
+.card:hover .card__shot img {
+  opacity: 1;
+  transform: scale(1.02);
+}
 .card__blurb {
   color: var(--text-dim);
   margin: 0 0 1.1rem;
@@ -387,6 +451,59 @@ section {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
+}
+.card__note {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+.card__story {
+  margin: 0 0 1.1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+}
+.card__story summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.card__story summary::-webkit-details-marker {
+  display: none;
+}
+.card__story summary::before {
+  content: '+';
+  font-family: ui-monospace, monospace;
+  color: var(--text-faint);
+}
+.card__story[open] summary::before {
+  content: '−';
+}
+.card__story summary:hover {
+  color: var(--text);
+}
+.card__story dl {
+  margin: 0.8rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+}
+.card__story dt {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.card__story dd {
+  margin: 0.15rem 0 0;
+  color: var(--text-dim);
+  line-height: 1.5;
 }
 .card__links {
   display: flex;

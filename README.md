@@ -15,10 +15,17 @@ My personal portfolio, rebuilt as a React + Vite single-page app with a modern d
 
 Projects are grouped by theme and pulled from my GitHub:
 
-- **Automation & Lead Systems** — lead-pool, dialer, fb-calendly-skeleton, CommSync
+- **Automation & Lead Systems** — lead-pool, fex-quoter, dialer, fb-calendly-skeleton
 - **Trading & Quant** — binance-triangular-arbitrage, Quant
-- **Infrastructure & Hardware** — pi-stack, home-automation-lab, Personal-OS
+- **Infrastructure & Networking** — ArxSpec, pi-stack, home-automation-lab, Personal-OS
+- **GovCon & Compliance Tools** — Capture Filter, CBOM Register
+- **Aviation** — CommSync
 - **Notion Widgets** — notionCalendar, notionWeather, notionSidebar
+
+Each card carries the year of the work and, where the repo has a real suite, its
+automated test count (`def test_`, `it(`/`test(`, and `func Test` cases). Private projects can show a pre-blurred screenshot from
+`assets/images/projects/<name>.webp`; the blur is baked into the file so the
+served image never contains readable data.
 
 ## Develop
 
