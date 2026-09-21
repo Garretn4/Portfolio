@@ -178,15 +178,6 @@ export const groups: ProjectGroup[] = [
         tags: ['Python', 'Webhooks', 'Automation'],
         isPrivate: true,
       },
-      {
-        name: 'CommSync',
-        year: '2025',
-        tests: 44,
-        title: 'CommSync',
-        blurb: 'Backend service that keeps conversations in sync across channels.',
-        tags: ['Python', 'API', 'Server'],
-        isPrivate: true,
-      },
     ],
   },
   {
@@ -209,6 +200,23 @@ export const groups: ProjectGroup[] = [
         title: 'Quant',
         blurb: 'Where I backtest trading strategy ideas before risking money on them.',
         tags: ['Python', 'Research'],
+        isPrivate: true,
+      },
+    ],
+  },
+  {
+    id: 'aviation',
+    label: 'Aviation',
+    summary: 'Speech-to-text for the radio, built for an iPad in the cockpit.',
+    projects: [
+      {
+        name: 'CommSync',
+        year: '2025',
+        tests: 44,
+        title: 'CommSync',
+        blurb:
+          'Transcribes air traffic control audio live on an iPad so the pilot is not scribbling clearances mid-flight. Streams audio over a WebSocket to a Whisper backend and keeps a searchable log.',
+        tags: ['Python', 'FastAPI', 'Whisper', 'WebSockets'],
         isPrivate: true,
       },
     ],

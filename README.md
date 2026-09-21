@@ -15,10 +15,11 @@ My personal portfolio, rebuilt as a React + Vite single-page app with a modern d
 
 Projects are grouped by theme and pulled from my GitHub:
 
-- **Automation & Lead Systems** — lead-pool, fex-quoter, dialer, fb-calendly-skeleton, CommSync
+- **Automation & Lead Systems** — lead-pool, fex-quoter, dialer, fb-calendly-skeleton
 - **Trading & Quant** — binance-triangular-arbitrage, Quant
 - **Infrastructure & Networking** — ArxSpec, pi-stack, home-automation-lab, Personal-OS
 - **GovCon & Compliance Tools** — Capture Filter, CBOM Register
+- **Aviation** — CommSync
 - **Notion Widgets** — notionCalendar, notionWeather, notionSidebar
 
 Each card carries the year of the work and, where the repo has a real suite, its
