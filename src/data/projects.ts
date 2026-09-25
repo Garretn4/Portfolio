@@ -56,7 +56,7 @@ export const groups: ProjectGroup[] = [
           'Type in a government contractor and it works out what they actually win, then screens open federal opportunities and says which ones are worth their time and why. Every yes and no comes with the rule behind it.',
         tags: ['Python', 'SAM.gov', 'USASpending'],
         year: '2026',
-        tests: 3130,
+        tests: 3265,
         story: {
           problem:
             'Contractors screen hundreds of SAM.gov notices by hand and cannot say afterwards why one was worth chasing.',
@@ -65,7 +65,7 @@ export const groups: ProjectGroup[] = [
           decision:
             'Local-first SQLite, two free data sources, and a named rule behind every yes and no. Each data pull shows whether it spends a quota slot before you press it.',
           outcome:
-            '3,130 offline tests, live API tests behind a separate marker, and a 900-line runbook.',
+            '3,265 offline tests, live API tests behind a separate marker, and a 900-line runbook.',
         },
         image: shot('capture-filter'),
         isPrivate: true,
@@ -109,10 +109,10 @@ export const groups: ProjectGroup[] = [
         name: 'ArxSpec',
         title: 'ArxSpec',
         blurb:
-          'One small program that turns the machines I already own into a remote control. Start, stop, and watch a script on the box it belongs on, from any device including a phone.',
+          'One small program that turns the machines I already own into a remote control. Start, stop, and watch a script on the box it belongs on, from a phone. Wakes sleeping machines, invites guests with a link, and runs end-to-end encrypted with no cloud account.',
         tags: ['Go', 'Networking', 'Post-quantum crypto'],
         year: '2026',
-        tests: 1125,
+        tests: 2281,
         image: shot('arxspec'),
         isPrivate: true,
       },
@@ -121,7 +121,7 @@ export const groups: ProjectGroup[] = [
         year: '2026',
         tests: 96,
         title: 'Pi Stack',
-        blurb: 'The service stack that runs on my Raspberry Pis.',
+        blurb: 'Docker Compose services behind Caddy on a pair of Raspberry Pis, plus the setup and recovery docs to rebuild it from a blank SSD.',
         tags: ['Python', 'Raspberry Pi', 'Self-hosted'],
         isPrivate: true,
       },
@@ -129,8 +129,8 @@ export const groups: ProjectGroup[] = [
         name: 'home-automation-lab',
         year: '2025',
         title: 'Home Automation Lab',
-        blurb: 'Config and notes for my home automation setup.',
-        tags: ['IoT', 'Automation', 'Config'],
+        blurb: 'Home Assistant on a Raspberry Pi, ESP32 sensors via ESPHome, and a HomeKit bridge. Automations, dashboards, and device configs.',
+        tags: ['Home Assistant', 'ESPHome', 'HomeKit'],
         repo: `${GH}/home-automation-lab`,
       },
       {
@@ -173,9 +173,19 @@ export const groups: ProjectGroup[] = [
         year: '2026',
         title: 'FEX Quoter',
         blurb:
-          'Agents log in, run a quote, and get the best-fit final-expense carrier. Saves every quote and audits every action.',
-        tags: ['Node', 'Express', 'SQLite', 'Render'],
+          'Agents log in, run a quote, and get the best-fit final-expense carrier with an approval estimate that learns from real outcomes. Saves every quote and audits every action.',
+        tags: ['Node', 'Express', 'SQLite', 'Nearest neighbors', 'Bayesian'],
         image: shot('fex-quoter'),
+        story: {
+          problem:
+            'Carrier underwriting guides say who should be approved. Real decisions drift from the guides, and agents only learn that by getting declined.',
+          constraint:
+            'Outcome history starts at zero and stays small per carrier, so the estimate has to be useful with no data and cannot be swung by one decline.',
+          decision:
+            'Rules produce a prior. Nearest neighbors then score every logged outcome for similarity on age, tobacco, gender, BMI, state, face amount, and conditions, drop weak matches, and weight the rest by similarity and a 180-day half-life. A Beta-Binomial update blends that evidence with the prior, where the rules count as five observations.',
+          outcome:
+            'With no history the estimate equals the rules. As similar outcomes accumulate it converges on the observed approval rate, and each carrier shows the top alternatives that placed its declines.',
+        },
         isPrivate: true,
       },
       {
@@ -199,24 +209,36 @@ export const groups: ProjectGroup[] = [
   },
   {
     id: 'trading',
-    label: 'Trading & Quant',
-    summary: 'Bots and backtests against live market data.',
+    label: 'Quant & Data',
+    summary: 'Bots, backtests, and analysis against live data.',
     projects: [
       {
         name: 'binance-triangular-arbitrage',
         year: '2025',
-        title: 'Triangular Arbitrage Bot',
-        blurb: 'Scans Binance order books for triangular arbitrage across trading pairs.',
-        tags: ['Python', 'Binance API', 'Trading'],
+        title: 'Exchange Arbitrage Scanner',
+        blurb:
+          'Watches the same coins on Coinbase, Kraken, Binance.US, and a DEX, nets out each venue\'s fees, and flags spreads that would still clear. Simulates the trade instead of placing it.',
+        tags: ['Python', 'Exchange APIs', 'Trading'],
         repo: `${GH}/binance-triangular-arbitrage`,
       },
       {
         name: 'Quant',
         year: '2026',
-        tests: 70,
+        tests: 85,
         title: 'Quant',
-        blurb: 'Where I backtest trading strategy ideas before risking money on them.',
+        blurb:
+          'A paper-trading leg capped at five dollars, a simulation fleet that culls and mutates strategy variants every six hours, and a review loop that can promote a winner but can never touch the risk limits.',
         tags: ['Python', 'Research'],
+        isPrivate: true,
+      },
+      {
+        name: 'ff-analyst',
+        year: '2026',
+        tests: 185,
+        title: 'FF Analyst',
+        blurb:
+          'Trade and league analysis for Sleeper fantasy football leagues. Pulls league data and NFL stats into DuckDB and runs the analysis locally.',
+        tags: ['Python', 'DuckDB', 'Polars', 'NiceGUI'],
         isPrivate: true,
       },
     ],
