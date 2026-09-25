@@ -144,6 +144,16 @@ section {
   font-weight: 800;
   letter-spacing: -0.02em;
 }
+.section-head__note {
+  margin: 0.75rem 0 0;
+  color: var(--text-dim);
+  max-width: 60ch;
+}
+.section-head__note a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 
 /* ---------- hero ---------- */
 .hero {
@@ -321,11 +331,14 @@ section {
   color: var(--text-dim);
   max-width: 60ch;
 }
+/* Multi-column masonry so a tall card (open case study) never leaves holes beside it. */
 .group__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-  align-items: start;
+  columns: 280px;
+  column-gap: 1.25rem;
+}
+.group__grid > .reveal {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
 }
 
 /* ---------- card ---------- */
@@ -451,12 +464,6 @@ section {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
-}
-.card__note {
-  font-family: ui-monospace, 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--text-faint);
-  font-weight: 500;
 }
 .card__story {
   margin: 0 0 1.1rem;
@@ -631,10 +638,11 @@ section {
   }
 }
 @media (max-width: 520px) {
-  .nav__links {
-    gap: 0.85rem;
+  .nav {
+    padding-inline: 1rem;
   }
-  .nav__links a:not(.nav__cta) {
-    display: none;
+  .nav__links {
+    gap: 0.7rem;
+    font-size: 0.85rem;
   }
 }

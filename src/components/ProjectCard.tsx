@@ -57,10 +57,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           </dl>
         </details>
       )}
-      <div className="card__links">
-        {project.isPrivate && !project.repo && !project.live && (
-          <span className="card__note">Walkthrough on request</span>
-        )}
+      {(project.repo || project.live) && (
+        <div className="card__links">
         {project.repo && (
           <a href={project.repo} target="_blank" rel="noreferrer">
             Code <ArrowIcon />
@@ -71,7 +69,8 @@ export default function ProjectCard({ project }: { project: Project }) {
             Live demo <ArrowIcon />
           </a>
         )}
-      </div>
+        </div>
+      )}
     </article>
   )
 }

@@ -8,6 +8,10 @@ export default function Projects() {
       <div className="section-head">
         <p className="section-head__eyebrow">Selected Work</p>
         <h2 className="section-head__title">Things I've built</h2>
+        <p className="section-head__note">
+          Cards marked private are client or in-progress work I cannot publish.{' '}
+          <a href="#contact">Walkthrough on request.</a>
+        </p>
       </div>
 
       {groups.map((group) => (
