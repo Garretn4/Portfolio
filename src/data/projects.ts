@@ -277,7 +277,34 @@ export const groups: ProjectGroup[] = [
   },
 ]
 
-export const stack = ['TypeScript', 'Python', 'Go', 'React', 'Node', 'FastAPI', 'SQLite', 'Raspberry Pi']
+/** Two scrolling rows under the hero: what the work is about, then what it is built with. */
+export const marquee = {
+  domains: [
+    'Lead routing',
+    'Quoting',
+    'Dialing',
+    'Federal capture',
+    'Pricing',
+    'Compliance',
+    'Post-quantum crypto',
+    'Self-hosted',
+    'Trading research',
+  ],
+  tools: [
+    'TypeScript',
+    'Python',
+    'Go',
+    'React',
+    'Node',
+    'FastAPI',
+    'SQLite',
+    'Supabase',
+    'Twilio',
+    'Whisper',
+    'DuckDB',
+    'Raspberry Pi',
+  ],
+}
 
 /** Sum of every card's test count. Used in the hero. */
 export const totalTests = groups.flatMap((g) => g.projects).reduce((n, p) => n + (p.tests ?? 0), 0)
