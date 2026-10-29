@@ -203,7 +203,7 @@ export const groups: ProjectGroup[] = [
         blurb:
           'My friends are shit at fantasy football. Unfortunately, I know Python. Pulls Sleeper league data and NFL stats into DuckDB for local trade and league analysis. They’re running out of excuses.',
         tags: ['Python', 'DuckDB', 'Polars'],
-        isPrivate: true,
+        repo: `${GH}/ff_data`,
       },
     ],
   },
