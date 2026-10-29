@@ -17,7 +17,7 @@ export default function Nav() {
           </span>
           <span className="nav__id">
             <span className="nav__name">Garret Nelson</span>
-            <span className="nav__role">Sales · Federal pricing · Software</span>
+            <span className="nav__role">Sales · Federal pricing &amp; Capture · Software</span>
           </span>
         </a>
         <nav className="nav__links">

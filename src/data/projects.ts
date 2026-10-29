@@ -12,8 +12,6 @@ export type Project = {
   tags: string[]
   /** Year the work happened. */
   year: string
-  /** Automated test cases in the repo. Omitted when there are none worth counting. */
-  tests?: number
   /** Short case study shown behind a toggle. */
   story?: Story
   /** Pre-blurred screenshot. Shows the look without showing the details. */
@@ -53,10 +51,9 @@ export const groups: ProjectGroup[] = [
         name: 'sam.gov_api_harness',
         title: 'Capture Filter',
         blurb:
-          'Type in a government contractor and it works out what they actually win, then screens open federal opportunities and says which ones are worth their time and why. Every yes and no comes with the rule behind it.',
+          'Opening government websites shouldn’t qualify as a fucking endurance sport. Enter a contractor, see what they actually win, and screen open federal opportunities against their history. Every yes and no comes with the rule behind it. Local database, simple Python setup.',
         tags: ['Python', 'SAM.gov', 'USASpending'],
         year: '2026',
-        tests: 3265,
         story: {
           problem:
             'Contractors screen hundreds of SAM.gov notices by hand and cannot say afterwards why one was worth chasing.',
@@ -65,20 +62,9 @@ export const groups: ProjectGroup[] = [
           decision:
             'Local-first SQLite, two free data sources, and a named rule behind every yes and no. Each data pull shows whether it spends a quota slot before you press it.',
           outcome:
-            '3,265 offline tests, live API tests behind a separate marker, and a 900-line runbook.',
+            'A named rule behind every decision, live API tests behind a separate marker, and a 900-line runbook.',
         },
         image: shot('capture-filter'),
-        isPrivate: true,
-      },
-      {
-        name: 'pqc-mapped',
-        title: 'CBOM Register',
-        blurb:
-          'Turns cryptographic scanner output into a prioritized compliance inventory. One evidence set covers post-quantum migration, FIPS 140-3, and TLS 1.3 deadlines.',
-        tags: ['Python', 'CLI', 'Post-quantum crypto'],
-        year: '2026',
-        tests: 163,
-        image: shot('cbom-register'),
         isPrivate: true,
       },
     ],
@@ -91,10 +77,9 @@ export const groups: ProjectGroup[] = [
       {
         name: 'CommSync',
         year: '2025',
-        tests: 44,
         title: 'CommSync',
         blurb:
-          'Transcribes air traffic control audio live on an iPad so the pilot is not scribbling clearances mid-flight. Streams audio over a WebSocket to a Whisper backend and keeps a searchable log.',
+          'Flying the plane already seemed like enough shit to do. Streams ATC audio over a WebSocket to a Whisper backend, puts live transcripts on an iPad, and keeps a searchable log of what was said.',
         tags: ['Python', 'FastAPI', 'Whisper', 'WebSockets'],
         isPrivate: true,
       },
@@ -106,22 +91,11 @@ export const groups: ProjectGroup[] = [
     summary: 'Services I run on my own hardware, and the tooling that ties the machines together.',
     projects: [
       {
-        name: 'ArxSpec',
-        title: 'ArxSpec',
-        blurb:
-          'One small program that turns the machines I already own into a remote control. Start, stop, and watch a script on the box it belongs on, from a phone. Wakes sleeping machines, invites guests with a link, and runs end-to-end encrypted with no cloud account.',
-        tags: ['Go', 'Networking', 'Post-quantum crypto'],
-        year: '2026',
-        tests: 2281,
-        image: shot('arxspec'),
-        isPrivate: true,
-      },
-      {
         name: 'pi-stack',
         year: '2026',
-        tests: 96,
         title: 'Pi Stack',
-        blurb: 'Docker Compose services behind Caddy on a pair of Raspberry Pis, plus the setup and recovery docs to rebuild it from a blank SSD.',
+        blurb:
+          'Two Raspberry Pis carrying the consequences of every “quick change.” Docker Compose services behind Caddy, with setup and recovery docs thorough enough to rebuild the whole arrangement from a blank SSD.',
         tags: ['Python', 'Raspberry Pi', 'Self-hosted'],
         isPrivate: true,
       },
@@ -129,17 +103,10 @@ export const groups: ProjectGroup[] = [
         name: 'home-automation-lab',
         year: '2025',
         title: 'Home Automation Lab',
-        blurb: 'Home Assistant on a Raspberry Pi, ESP32 sensors via ESPHome, and a HomeKit bridge. Automations, dashboards, and device configs.',
+        blurb:
+          'Your house can have an IT department now. Home Assistant on a Raspberry Pi, ESP32 sensors through ESPHome, and a HomeKit bridge, with the automations, dashboards, and device configs holding the whole arrangement together.',
         tags: ['Home Assistant', 'ESPHome', 'HomeKit'],
         repo: `${GH}/home-automation-lab`,
-      },
-      {
-        name: 'Personal-OS',
-        year: '2026',
-        title: 'Personal OS',
-        blurb: 'A dashboard for running my day to day.',
-        tags: ['JavaScript', 'Dashboard'],
-        isPrivate: true,
       },
     ],
   },
@@ -151,9 +118,9 @@ export const groups: ProjectGroup[] = [
       {
         name: 'lead-pool',
         year: '2026',
-        tests: 3715,
         title: 'Lead Pool',
-        blurb: 'Routes inbound leads to the right rep the moment they arrive.',
+        blurb:
+          'Introduced due process to “who gets this lead?” Routes inbound leads to the right rep as they arrive, checks state licenses, enforces claim windows, and records the reason behind every decision. The leads now have more procedural oversight than most group projects.',
         tags: ['TypeScript', 'Next.js', 'Supabase'],
         image: shot('lead-pool'),
         story: {
@@ -164,7 +131,7 @@ export const groups: ProjectGroup[] = [
           decision:
             'Presence-based routing with a claim window. A status-guarded atomic transition means exactly one rep claims, even on replays. A miss cascades to the next rep. Repeat misses bench you.',
           outcome:
-            'Tenants cannot see each other\'s leads by construction, and every routing decision leaves an audit row. 3,715 automated tests.',
+            'Tenants cannot see each other\'s leads by construction, and every routing decision leaves an audit row.',
         },
         isPrivate: true,
       },
@@ -173,8 +140,8 @@ export const groups: ProjectGroup[] = [
         year: '2026',
         title: 'FEX Quoter',
         blurb:
-          'Agents log in, run a quote, and get the best-fit final-expense carrier with an approval estimate that learns from real outcomes. Saves every quote and audits every action.',
-        tags: ['Node', 'Express', 'SQLite', 'Nearest neighbors', 'Bayesian'],
+          'Asked which carrier fit best and assigned myself a statistics problem. Agents run a quote and get a best-fit final-expense carrier with an approval estimate that learns from real outcomes. Every quote gets saved. Every action leaves a receipt.',
+        tags: ['Node', 'Express', 'SQLite', 'Bayesian'],
         image: shot('fex-quoter'),
         story: {
           problem:
@@ -191,7 +158,6 @@ export const groups: ProjectGroup[] = [
       {
         name: 'dialer',
         year: '2026',
-        tests: 63,
         title: 'Dialer',
         blurb: 'Power dialer that runs a full outbound calling session in the browser.',
         tags: ['TypeScript', 'Vercel', 'Telephony'],
@@ -217,61 +183,80 @@ export const groups: ProjectGroup[] = [
         year: '2025',
         title: 'Exchange Arbitrage Scanner',
         blurb:
-          'Watches the same coins on Coinbase, Kraken, Binance.US, and a DEX, nets out each venue\'s fees, and flags spreads that would still clear. Simulates the trade instead of placing it.',
+          'Watches the same coins on Coinbase, Kraken, Binance.US, and a DEX, nets out each venue\'s fees, and flags spreads that would still clear. Simulates the trade instead of placing it. Feel Free to use has never actually successfully traded for profit.',
         tags: ['Python', 'Exchange APIs', 'Trading'],
         repo: `${GH}/binance-triangular-arbitrage`,
       },
       {
         name: 'Quant',
         year: '2026',
-        tests: 85,
         title: 'Quant',
         blurb:
-          'A paper-trading leg capped at five dollars, a simulation fleet that culls and mutates strategy variants every six hours, and a review loop that can promote a winner but can never touch the risk limits.',
+          'A paper-trading leg capped at five dollars, a simulation fleet that culls and mutates strategy variants every six hours, and a review loop that can promote a winner but can never touch the risk limits. No one got the promotion.',
         tags: ['Python', 'Research'],
         isPrivate: true,
       },
       {
         name: 'ff-analyst',
         year: '2026',
-        tests: 185,
         title: 'FF Analyst',
         blurb:
-          'Trade and league analysis for Sleeper fantasy football leagues. Pulls league data and NFL stats into DuckDB and runs the analysis locally.',
-        tags: ['Python', 'DuckDB', 'Polars', 'NiceGUI'],
+          'My friends are shit at fantasy football. Unfortunately, I know Python. Pulls Sleeper league data and NFL stats into DuckDB for local trade and league analysis. They’re running out of excuses.',
+        tags: ['Python', 'DuckDB', 'Polars'],
         isPrivate: true,
       },
     ],
   },
   {
-    id: 'notion',
-    label: 'Notion Widgets',
-    summary: 'Widgets I embed in Notion dashboards.',
+    id: 'early',
+    label: 'Early Work',
+    summary:
+      'The 2022 bootcamp archives. Back when the inconveniences were smaller and the responses were still somewhat proportional.',
     projects: [
       {
-        name: 'notionCalendar',
-        year: '2025',
-        title: 'Notion Calendar',
-        blurb: 'An embeddable calendar widget for Notion pages.',
-        tags: ['HTML', 'Widget'],
-        repo: `${GH}/notionCalendar`,
-        live: 'https://garretn4.github.io/notionCalendar/',
+        name: 'Weather-App',
+        year: '2022',
+        title: 'Weather Dashboard',
+        blurb:
+          'Checks the weather so I have something to blame. A five-day forecast that calls an API and remembers your recent searches.',
+        tags: ['JavaScript', 'API'],
+        repo: `${GH}/Weather-App`,
       },
       {
-        name: 'notionWeather',
-        year: '2025',
-        title: 'Notion Weather',
-        blurb: 'A live weather widget for Notion dashboards.',
-        tags: ['HTML', 'Widget'],
-        repo: `${GH}/notionWeather`,
+        name: 'Coding-Quiz',
+        year: '2022',
+        title: 'Coding Quiz',
+        blurb:
+          'A timed multiple-choice quiz on JavaScript basics with a high-score board saved in the browser.',
+        tags: ['JavaScript', 'HTML'],
+        repo: `${GH}/Coding-Quiz`,
       },
       {
-        name: 'notionSidebar',
-        year: '2025',
-        title: 'Notion Sidebar',
-        blurb: 'A sidebar widget for navigating a Notion workspace.',
-        tags: ['HTML', 'Widget'],
-        repo: `${GH}/notionSidebar`,
+        name: 'Day-Scheduler',
+        year: '2022',
+        title: 'Work Day Scheduler',
+        blurb:
+          'Gave procrastination a color scheme. An hourly planner that marks past, present, and future and saves notes locally. The schedule exists. Compliance is a separate issue.',
+        tags: ['JavaScript', 'jQuery'],
+        repo: `${GH}/Day-Scheduler`,
+      },
+      {
+        name: 'RandomPWGenerator',
+        year: '2022',
+        title: 'Password Generator',
+        blurb:
+          'Generates a random password to the length and character rules you pick. I am not going to remember it regardless. I have Face ID.',
+        tags: ['JavaScript', 'HTML'],
+        repo: `${GH}/RandomPWGenerator`,
+      },
+      {
+        name: 'readME-Gen',
+        year: '2022',
+        title: 'README Generator',
+        blurb:
+          'Wrote a tool to explain the tools. A command-line questionnaire that turns your answers into a formatted README. The documentation has been assigned to software.',
+        tags: ['Node', 'CLI'],
+        repo: `${GH}/readME-Gen`,
       },
     ],
   },
@@ -286,14 +271,12 @@ export const marquee = {
     'Federal capture',
     'Pricing',
     'Compliance',
-    'Post-quantum crypto',
     'Self-hosted',
     'Trading research',
   ],
   tools: [
     'TypeScript',
     'Python',
-    'Go',
     'React',
     'Node',
     'FastAPI',
@@ -305,6 +288,3 @@ export const marquee = {
     'Raspberry Pi',
   ],
 }
-
-/** Sum of every card's test count. Used in the hero. */
-export const totalTests = groups.flatMap((g) => g.projects).reduce((n, p) => n + (p.tests ?? 0), 0)
