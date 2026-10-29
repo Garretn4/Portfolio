@@ -29,12 +29,6 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
       <p className="card__meta">
         <span>{project.year}</span>
-        {project.tests && (
-          <>
-            <span aria-hidden="true">·</span>
-            <span>{project.tests.toLocaleString()} tests</span>
-          </>
-        )}
       </p>
       <p className="card__blurb">{project.blurb}</p>
       <ul className="card__tags">

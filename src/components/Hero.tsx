@@ -1,4 +1,4 @@
-import { marquee, totalTests } from '../data/projects.ts'
+import { marquee } from '../data/projects.ts'
 import CopyEmail from './CopyEmail.tsx'
 import photo from '../../assets/images/garret.jpg'
 
@@ -23,13 +23,13 @@ export default function Hero() {
       <div className="hero__inner">
         <img className="hero__photo" src={photo} alt="Garret Nelson" width="128" height="128" />
         <h1 className="hero__title">
-          Software that <span className="hero__title-dim">holds up.</span>{' '}
-          <span className="hero__title-accent">In use.</span>
+          Momentarily annoyed.{' '}
+          <span className="hero__title-accent">Unreasonable engineering.</span>
         </h1>
         <p className="hero__sub">
           Lead routing, quoting, and dialing for insurance agencies. Opportunity screening and
-          crypto inventories for federal contractors. {totalTests.toLocaleString()} automated
-          tests across the repos.
+          capture for federal contractors. Trading research and self-hosted infrastructure on the
+          side.
         </p>
         <div className="hero__actions">
           <a className="btn btn--primary" href="#work">
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <p className="hero__now">
           <span className="hero__now-dot" aria-hidden="true" />
-          Now building ArxSpec: remote control for my own machines, with post-quantum crypto.
+          Now building Capture Filter: federal opportunity screening with a rule behind every call.
         </p>
       </div>
       <div className="marquee" aria-label="Areas of work and tools">
