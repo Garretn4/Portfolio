@@ -23,8 +23,8 @@ export default function Hero() {
       <div className="hero__inner">
         <img className="hero__photo" src={photo} alt="Garret Nelson" width="128" height="128" />
         <h1 className="hero__title">
-          Software that <span className="hero__title-dim">holds up.</span>{' '}
-          <span className="hero__title-accent">In use.</span>
+          Momentarily annoyed.{' '}
+          <span className="hero__title-accent">Unreasonable engineering.</span>
         </h1>
         <p className="hero__sub">
           Lead routing, quoting, and dialing for insurance agencies. Opportunity screening and
